@@ -26,6 +26,7 @@ Here’s what those new lines do:
 **UseStatusCodePages()** adds a middleware that will return a problem details response for common HTTP status codes.
 **UseExceptionHandler()** adds a middleware that will return a problem details response for unhandled exceptions.
 
+
 Now, if you run the API again and invoke either of the endpoints, you’ll get a slightly more useful response:
 
 ```
