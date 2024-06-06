@@ -23,6 +23,7 @@ app.UseExceptionHandler();
 Here’s what those new lines do:
 
 **AddProblemDetails()** registers the problem details middleware that will handle exceptions and return a problem details response.
+<br/>
 **UseStatusCodePages()** adds a middleware that will return a problem details response for common HTTP status codes.
 **UseExceptionHandler()** adds a middleware that will return a problem details response for unhandled exceptions.
 
