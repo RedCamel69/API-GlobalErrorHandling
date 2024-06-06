@@ -22,9 +22,9 @@ app.UseExceptionHandler();
 
 Here’s what those new lines do:
 
-AddProblemDetails() registers the problem details middleware that will handle exceptions and return a problem details response.
-UseStatusCodePages() adds a middleware that will return a problem details response for common HTTP status codes.
-UseExceptionHandler() adds a middleware that will return a problem details response for unhandled exceptions.
+**AddProblemDetails()** registers the problem details middleware that will handle exceptions and return a problem details response.
+**UseStatusCodePages()** adds a middleware that will return a problem details response for common HTTP status codes.
+**UseExceptionHandler()** adds a middleware that will return a problem details response for unhandled exceptions.
 
 Now, if you run the API again and invoke either of the endpoints, you’ll get a slightly more useful response:
 
