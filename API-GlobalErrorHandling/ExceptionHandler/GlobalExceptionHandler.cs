@@ -40,7 +40,7 @@ namespace API_GlobalErrorHandling.ExceptionHandler
             {
                 ArgumentOutOfRangeException => (StatusCodes.Status400BadRequest, exception.Message),
                 ArgumentException => (StatusCodes.Status400BadRequest,exception.Message),
-                _ => (StatusCodes.Status500InternalServerError, "We made a mistake but we are on it!")
+                _ => (StatusCodes.Status500InternalServerError, "Sorry, its not you , its us!")
             };
         }
     }
