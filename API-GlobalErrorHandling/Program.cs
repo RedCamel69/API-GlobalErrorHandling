@@ -13,6 +13,9 @@ namespace API_GlobalErrorHandling
 
             // Add services to the container.
             builder.Services.AddAuthorization();
+            
+            // add support for traditional api
+            builder.Services.AddControllers();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -24,6 +27,7 @@ namespace API_GlobalErrorHandling
 
             var app = builder.Build();
 
+            
             app.UseStatusCodePages();
             app.UseExceptionHandler();
 
@@ -58,7 +62,8 @@ namespace API_GlobalErrorHandling
             .WithName("GetWeatherForecast")
             .WithOpenApi();
 
-
+            // add routing for traditional api
+            app.MapControllers();
            
             app.MapGet("/films", async (IFilmRepository repository) =>
             {
